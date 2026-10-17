@@ -1,0 +1,177 @@
+/* Общие сбросы стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #030303;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Верхняя панель */
+.header {
+    height: 64px;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-bottom: 1px solid #303030;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff0000; /* Фирменный красный акцент */
+}
+
+.search-bar input {
+    width: 400px;
+    padding: 8px 16px;
+    background-color: #313131;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+}
+
+/* Главный контейнер (Сайдбар + Контент) */
+.main-container {
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 64px - 72px); /* Вычитаем высоту хедера и плеера */
+}
+
+/* Боковое меню */
+.sidebar {
+    width: 240px;
+    background-color: #212121;
+    padding: 16px;
+}
+
+.nav-item {
+    display: block;
+    color: #aaaaaa;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: background 0.2s;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #313131;
+    color: #ffffff;
+}
+
+/* Основной контент */
+.content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    background: linear-gradient(180deg, #1f1f1f 0%, #030303 100%);
+}
+
+.section h2 {
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+/* Сетка карточек */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #161616;
+    padding: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.card:hover {
+    background-color: #282828;
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #313131;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Нижний плеер */
+.player-bar {
+    height: 72px;
+    background-color: #212121;
+    border-top: 1px solid #303030;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mini-cover {
+    width: 48px;
+    height: 48px;
+    background-color: #313131;
+    border-radius: 4px;
+}
+
+.track-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.track-artist {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.control-btn.play {
+    font-size: 28px;
+}
+
+.volume-slider {
+    accent-color: #ff0000;
+    cursor: pointer;
+}
